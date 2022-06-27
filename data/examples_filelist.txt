@@ -1,2 +1,1 @@
-data/example1.wav|exploring the expanses of space to keep our planet safe|1
-data/example2.wav|and all the species that call it home|1
+data/example1.wav|반짝반짝 작은별 아름답게 비치네.|0
