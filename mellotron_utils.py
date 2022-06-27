@@ -430,7 +430,7 @@ def event2text(events, convert_stress, cmudict=None):
     if convert_stress:
         text_clean = re.sub('[0-9]', '1', text_clean)
 
-    text_encoded = text_to_sequence(text_clean, [], cmudict)
+    text_encoded = text_to_sequence(text_clean)
     return text_encoded, text_clean
 
 

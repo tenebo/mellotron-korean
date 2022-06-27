@@ -1,5 +1,3 @@
-""" from https://github.com/keithito/tacotron """
-
 import inflect
 import re
 

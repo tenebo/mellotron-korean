@@ -20,7 +20,6 @@ class TextMelLoader(torch.utils.data.Dataset):
     """
     def __init__(self, audiopaths_and_text, hparams, speaker_ids=None):
         self.audiopaths_and_text = load_filepaths_and_text(audiopaths_and_text)
-        self.text_cleaners = hparams.text_cleaners
         self.max_wav_value = hparams.max_wav_value
         self.sampling_rate = hparams.sampling_rate
         self.stft = layers.TacotronSTFT(
@@ -93,7 +92,7 @@ class TextMelLoader(torch.utils.data.Dataset):
 
     def get_text(self, text):
         text_norm = torch.IntTensor(
-            text_to_sequence(text, self.text_cleaners, self.cmudict, self.p_arpabet))
+            text_to_sequence(text))
 
         return text_norm
 
