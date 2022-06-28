@@ -4,12 +4,11 @@ import string
 import numpy as np
 
 from text import cleaners
-from hparams import create_hparams
 from text.symbols import symbols, en_symbols, PAD, EOS
 from text.korean import jamo_to_korean
 
 
-hparams = create_hparams()
+hparams_cleaners = 'korean_cleaners'
 # Mappings from symbol to numeric ID and vice versa:
 _symbol_to_id = {s: i for i, s in enumerate(symbols)}   # 80개
 _id_to_symbol = {i: s for i, s in enumerate(symbols)}
@@ -43,7 +42,7 @@ def remove_puncuations(text):
     return text.translate(puncuation_table)
 
 def text_to_sequence(text, as_token=False):    
-    cleaner_names = [x.strip() for x in hparams.cleaners.split(',')]
+    cleaner_names = [x.strip() for x in hparams_cleaners.split(',')]
     if ('english_cleaners' in cleaner_names) and isEn==False:
         convert_to_en_symbols()
     return _text_to_sequence(text, cleaner_names, as_token)
@@ -84,7 +83,7 @@ def _text_to_sequence(text, cleaner_names, as_token):
 
 def sequence_to_text(sequence, skip_eos_and_pad=False, combine_jamo=False):
     '''Converts a sequence of IDs back to a string'''
-    cleaner_names=[x.strip() for x in hparams.cleaners.split(',')]
+    cleaner_names=[x.strip() for x in hparams_cleaners.split(',')]
     if 'english_cleaners' in cleaner_names and isEn==False:
         convert_to_en_symbols()
         
