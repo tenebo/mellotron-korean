@@ -30,7 +30,7 @@ def create_hparams(hparams_string=None, verbose=False):
         training_files='filelists/ljs_audio_text_train_filelist.txt',
         validation_files='filelists/ljs_audio_text_val_filelist.txt',
         text_cleaners=['english_cleaners'],
-        p_arpabet=1.0,
+        p_arpabet=0.0,
         cmudict_path="data/cmu_dictionary",
 
         ################################
