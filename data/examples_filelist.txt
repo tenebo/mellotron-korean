@@ -1,1 +1,3 @@
 data/example1.wav|반짝반짝 작은별 아름답게 비치네.|0
+data/example2.wav|스윗 드림즈 얼 메이드 업 디스. 프렌들리 어시스턴스 투 컷 투 플리즈.|0
+data/example3.wav|몇십년 동안 서로 달리 살아온.|0
