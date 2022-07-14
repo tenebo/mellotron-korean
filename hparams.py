@@ -70,8 +70,8 @@ def create_hparams(hparams_string=None, verbose=False):
         prenet_rms_kernel_size=1,
         max_decoder_steps=1000,
         gate_threshold=0.5,
-        p_attention_dropout=0.1,
-        p_decoder_dropout=0.1,
+        p_attention_dropout=0.2,
+        p_decoder_dropout=0.2,
         p_teacher_forcing=1.0,
 
         # Attention parameters
