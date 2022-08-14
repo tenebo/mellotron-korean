@@ -9,4 +9,3 @@ pillow
 nltk==3.4.5
 jamo==0.4.1
 music21
-numba==0.48
